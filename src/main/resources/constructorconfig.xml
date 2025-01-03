@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.anik.constructorInjection.Certificate" name="certificate">
+        <property name="name" value="java-certificate"/>
+    </bean>
+
+    <bean class="org.anik.constructorInjection.Person" name="person">
+        <constructor-arg value="Abid" />
+        <constructor-arg value="22"/>
+        <constructor-arg ref="certificate"/>
+        <constructor-arg>
+            <list>
+                <value>abc</value>
+                <value>def</value>
+                <value>ghi</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean class="org.anik.constructorInjection.Addition" name="addition">
+        <constructor-arg value="12" type="int"/>
+        <constructor-arg value="17" type="int"/>
+    </bean>
+
+</beans>

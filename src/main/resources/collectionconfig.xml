@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.anik.collection.Employee" name="employee1">
+        <property name="name" value="Adam" />
+        <property name="phones">
+            <list>
+                <value>01234</value>
+                <value>01235</value>
+                <value>01236</value>
+                <value>01237</value>
+                <value>null</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Delhi</value>
+                <value>Dhaka</value>
+                <value>Dubai</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="8month" />
+                <entry key="python" value="5month" />
+                <entry key="c" value="7month" />
+            </map>
+        </property>
+    </bean>
+
+</beans>
