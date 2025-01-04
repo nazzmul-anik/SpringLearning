@@ -14,5 +14,9 @@ public class Test {
 
         SoftDrink softDrink = (SoftDrink) context.getBean("softDrink");
         System.out.println(softDrink);
+
+        System.out.println("================================");
+        Example subject = (Example) context.getBean("example");
+        System.out.println(subject);
     }
 }

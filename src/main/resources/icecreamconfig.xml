@@ -9,4 +9,7 @@
     <bean class="org.anik.lifecycle.SoftDrink" name="softDrink">
         <property name="price" value="35.50"/>
     </bean>
+    <bean class="org.anik.lifecycle.Example" name="example">
+        <property name="subject" value="Java Spring"/>
+    </bean>
 </beans>
