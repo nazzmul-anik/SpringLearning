@@ -6,4 +6,7 @@
     <bean class="org.anik.lifecycle.IceCream" name="iceCream" init-method="hi" destroy-method="bye">
         <property name="price" value="10"/>
     </bean>
+    <bean class="org.anik.lifecycle.SoftDrink" name="softDrink">
+        <property name="price" value="35.50"/>
+    </bean>
 </beans>
