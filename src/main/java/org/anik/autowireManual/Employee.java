@@ -1,4 +1,4 @@
-package org.anik.autowire;
+package org.anik.autowireManual;
 
 public class Employee {
     private Address address;

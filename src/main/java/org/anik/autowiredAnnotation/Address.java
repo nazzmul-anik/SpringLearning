@@ -1,4 +1,4 @@
-package org.anik.autowire;
+package org.anik.autowiredAnnotation;
 
 public class Address {
     private String street;
