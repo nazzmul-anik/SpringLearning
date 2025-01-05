@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    Stand-Alone List-->
+    <util:list list-class="java.util.LinkedList" id="myFriends">
+        <value>Asif</value>
+        <value>Robin</value>
+        <value>Shawon</value>
+        <value>Razib</value>
+    </util:list>
+
+<!--    Stand-Alone Map-->
+    <util:map map-class="java.util.HashMap" id="fees">
+        <entry key="Java Core" value="5000"/>
+        <entry key="Java EE" value="8000"/>
+        <entry key="Java Spring" value="10000"/>
+        <entry key="Java Spring Boot" value="15000"/>
+    </util:map>
+
+<!--    Stand-Alone Properties-->
+    <util:properties id="dbconfig">
+        <prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+        <prop key="username">Anik</prop>
+        <prop key="password">12234</prop>
+        <prop key="url">mysql:jdbc://localhost:3306/databaseName</prop>
+    </util:properties>
+
+    <bean class="org.anik.standalonecollection.Person" name="person">
+        <property name="friends" ref="myFriends"/>
+        <property name="feesStructure" ref="fees"/>
+        <property name="properties" ref="dbconfig"/>
+    </bean>
+    <bean class="org.anik.standalonecollection.Person" name="person2">
+        <property name="friends" ref="myFriends"/>
+    </bean>
+
+</beans>
