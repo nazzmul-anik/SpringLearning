@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.anik.autowire.Address" name="address1">
+        <property name="street" value="Khilgaon"/>
+        <property name="city" value="Dhaka"/>
+    </bean>
+    <bean class="org.anik.autowire.Address" name="address">
+        <property name="street" value="Shamoltola"/>
+        <property name="city" value="Kolkata"/>
+    </bean>
+
+    <bean class="org.anik.autowire.Employee" name="employee" autowire="constructor"/>
+
+
+</beans>
