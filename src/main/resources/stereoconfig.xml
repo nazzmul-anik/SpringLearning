@@ -17,5 +17,6 @@
         <value>Dublin</value>
     </util:list>
 
+    <bean class="org.anik.StereoType.Teacher" name="teacher" scope="prototype"/>
 
 </beans>

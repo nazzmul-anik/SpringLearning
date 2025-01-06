@@ -9,5 +9,17 @@ public class Test {
         Student student = (Student) context.getBean("ob");
         System.out.println(student.getAddress());
         System.out.println(student.getAddress().getClass());
+        System.out.println(student.hashCode());
+
+        Student student2 = (Student) context.getBean("ob");
+        System.out.println(student2.hashCode());
+
+        Teacher teacher1 = (Teacher) context.getBean("teacher");
+        Teacher teacher2 = (Teacher) context.getBean("teacher");
+
+        System.out.println("Teacher's");
+        System.out.println(teacher1.hashCode());
+        System.out.println(teacher2.hashCode());
+
     }
 }

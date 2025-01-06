@@ -1,11 +1,13 @@
 package org.anik.StereoType;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component("ob")
+@Scope("prototype")
 public class Student {
     @Value("Anik")
     private String studentName;
