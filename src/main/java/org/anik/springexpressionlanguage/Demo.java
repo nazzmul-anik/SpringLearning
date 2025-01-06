@@ -17,6 +17,8 @@ public class Demo {
     private double pi;
     @Value("#{ new java.lang.String('Md. Nazmul Hasan Anik')}")
     private String name;
+    @Value("#{true}")
+    private boolean isTrue;
 
     public int getX() {
         return x;
@@ -66,6 +68,14 @@ public class Demo {
         this.name = name;
     }
 
+    public boolean isTrue() {
+        return isTrue;
+    }
+
+    public void setTrue(boolean aTrue) {
+        isTrue = aTrue;
+    }
+
     @Override
     public String toString() {
         return "Demo{" +
@@ -75,6 +85,7 @@ public class Demo {
                 ", e=" + e +
                 ", pi=" + pi +
                 ", name='" + name + '\'' +
+                ", isTrue=" + isTrue +
                 '}';
     }
 }
